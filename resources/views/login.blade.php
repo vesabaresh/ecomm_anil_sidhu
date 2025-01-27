@@ -4,16 +4,17 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-4 col-sm-offset">
-	<form>
+	<form action="login" method="POST">
   <!-- Email input -->
+  @csrf
   <div data-mdb-input-init class="form-outline mb-4">
-    <input type="email" id="form2Example1" class="form-control" />
+    <input type="email" name="email" id="email" class="form-control" />
     <label class="form-label" for="form2Example1">Email address</label>
   </div>
 
   <!-- Password input -->
   <div data-mdb-input-init class="form-outline mb-4">
-    <input type="password" id="form2Example2" class="form-control" />
+    <input type="password" name="password" id="password" class="form-control" />
     <label class="form-label" for="form2Example2">Password</label>
   </div>
 
@@ -34,7 +35,7 @@
   </div>
 
   <!-- Submit button -->
-  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
+  <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Login</button>
 
   <!-- Register buttons -->
   <div class="text-center">
